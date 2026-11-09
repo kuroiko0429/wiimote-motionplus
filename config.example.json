@@ -1,0 +1,26 @@
+// Wii Remote button configuration (UTF-8). Restart the app after editing.
+// Only // line comments are supported; /* ... */ block comments and trailing commas are not.
+// Button names: a (A), b (B), one (1), two (2), home (HOME),
+//               up, down, left, right (D-pad), plus (+), minus (-)
+// Available actions (assign any action to any button):
+//   none: disable; left_click: left click; right_click: right click; middle_click: middle-click tap
+//   calibrate: recalibrate; pause: pause/resume movement and scrolling (clicks remain enabled)
+//   scroll_up, scroll_down, scroll_left, scroll_right: scroll in the specified direction
+//   sensitivity_up: increase sensitivity; sensitivity_down: decrease sensitivity
+// Omitted buttons keep their defaults. Use none to disable a button.
+// Example: swaps A/B only; not used for automatic installation.
+{
+  "buttons": {
+    "a": "right_click", // A: right click (swapped example; held while pressed)
+    "b": "left_click", // B: left click (swapped example; hold to drag)
+    "one": "calibrate", // 1: gyro: keep still to recalibrate; accel: use current tilt as center
+    "two": "middle_click", // 2: one middle-click tap on press (not held)
+    "home": "pause", // HOME: pause/resume movement and scrolling (clicks remain enabled)
+    "up": "scroll_up", // D-pad up: scroll up while held
+    "down": "scroll_down", // D-pad down: scroll down while held
+    "left": "scroll_left", // D-pad left: scroll left while held
+    "right": "scroll_right", // D-pad right: scroll right while held
+    "plus": "sensitivity_up", // +: increase sensitivity for the active mode on press
+    "minus": "sensitivity_down" // -: decrease sensitivity for the active mode on press
+  }
+}

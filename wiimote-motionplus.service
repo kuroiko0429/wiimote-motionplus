@@ -1,0 +1,16 @@
+[Unit]
+Description=Wii Remote MotionPlus mouse (wait and reconnect)
+
+[Service]
+Type=exec
+Environment="WIIMOTE_MODE=auto"
+Environment="WIIMOTE_GYRO_SENSITIVITY=10"
+Environment="XDG_CONFIG_HOME=%h/.config"
+EnvironmentFile=-%h/.config/wiimote-motionplus/daemon.env
+ExecStart="%h/.local/bin/wiimote-motionplus" --daemon --mode "${WIIMOTE_MODE}" --gyro-sensitivity "${WIIMOTE_GYRO_SENSITIVITY}"
+Restart=on-failure
+RestartSec=2
+RestartPreventExitStatus=2 78
+
+[Install]
+WantedBy=default.target
